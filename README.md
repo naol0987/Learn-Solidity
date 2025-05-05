@@ -35,7 +35,7 @@ The repository includes individual progress screenshots, with each team member's
 This project was a collaborative effort by our team members:
 
 - **Naol Humnesa - ugr/23804/13**
-- **Behailu Berhanu - ugr/22853/13**
-- **Bereket Tadese - ugr/23901/13**
+- **Behailu Birhanu - ugr/22853/13**
+- **Bereket Tadese - ugr/22901/13**
 - **Nuru Husen - ugr/22715/13**
-- **Mikhone H/mariyam - ugr/23408/13**
+- **Mikhon H/mariyam - ugr/23408/13**
