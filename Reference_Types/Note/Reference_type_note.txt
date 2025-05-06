@@ -1,0 +1,72 @@
+Solidity Reference Types: Arrays, Mappings, and Structs
+1. Arrays
+Reference Type: Arrays are reference types in Solidity.
+
+Storage vs. Memory/Calldata:
+
+Storage: Persists on the blockchain (permanent).
+
+Memory/Calldata: Temporary (exists only during function execution).
+
+Use Cases:
+
+Ordered data storage.
+
+Iteration over elements.
+
+Security Risks:
+
+Unlimited-size arrays + iteration → Risk of Denial of Service (DOS).
+
+2. Reference Types Overview
+Types:
+
+string, bytes, arrays, mappings, structs.
+
+Memory Location Declaration (required for function args):
+
+calldata (read-only, for unmodified inputs).
+
+memory (temporary, function execution).
+
+storage (persistent, on-chain).
+
+3. Mappings
+Key/Value Lookup: Efficient hash-based storage (e.g., mapping(address => uint256)).
+
+Storage: Always stored in storage, read-only.
+
+Cannot be passed directly as function arguments.
+
+Nested Mappings: Allowed (e.g., mapping(address => mapping(uint256 => bool))).
+
+Use Cases:
+
+Address balances (mapping(address => uint256)).
+
+Access control (e.g., mapping(address => Role)).
+
+4. Structs
+Grouped Variables: Custom data structures to organize related variables.
+
+Storage Locations: Can be in storage, memory, or calldata.
+
+Nesting: Can be nested in arrays, mappings, or other structs.
+
+Example:
+
+solidity
+struct User {
+    address wallet;
+    uint256 balance;
+    bool isActive;
+}
+mapping(address => User) public users;
+Key Takeaways
+Arrays: Best for ordered data & iteration (watch for DOS risks).
+
+Mappings: Efficient key/value storage (cannot pass as args).
+
+Structs: Custom data grouping for complex logic.
+
+Memory Locations: Always specify (storage, memory, calldata)
